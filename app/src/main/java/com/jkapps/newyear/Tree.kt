@@ -1,5 +1,7 @@
 package com.jkapps.newyear
 
+import com.jkapps.newyear.entity.AnimationProperties
+
 class Tree(private val animationProvider: AnimationPropertyProvider) {
     private val decorations = mutableMapOf<Decoration, Int>()
 

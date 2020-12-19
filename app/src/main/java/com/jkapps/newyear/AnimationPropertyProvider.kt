@@ -2,6 +2,9 @@ package com.jkapps.newyear
 
 import android.animation.PropertyValuesHolder
 import android.view.View
+import com.jkapps.newyear.entity.AnimationProperties
+import com.jkapps.newyear.entity.Dimension
+import com.jkapps.newyear.entity.Point
 
 class AnimationPropertyProvider(buttonWidth: Float, offset: Point, treeDimension: Dimension) {
     private val translationX: List<PropertyValuesHolder> = listOf(

@@ -9,6 +9,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.core.view.doOnPreDraw
 import com.jkapps.newyear.Decoration.*
+import com.jkapps.newyear.entity.AnimationProperties
+import com.jkapps.newyear.entity.Dimension
+import com.jkapps.newyear.entity.Point
 
 class MainActivity : AppCompatActivity() {
     private lateinit var tree : Tree

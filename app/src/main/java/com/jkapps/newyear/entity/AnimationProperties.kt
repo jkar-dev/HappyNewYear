@@ -1,4 +1,4 @@
-package com.jkapps.newyear
+package com.jkapps.newyear.entity
 
 import android.animation.PropertyValuesHolder
 
