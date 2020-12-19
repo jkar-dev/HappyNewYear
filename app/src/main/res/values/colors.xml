@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="pinkish_white">#FFFAF3</color>
-    <color name="light_pink">#FFF0D9</color>
+    <color name="milk">#FFFAF3</color>
+    <color name="light_peach">#FFF0D9</color>
+    <color name="sand">#FFC677</color>
 </resources>
