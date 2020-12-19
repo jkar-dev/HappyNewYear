@@ -7,21 +7,21 @@ class Tree(private val animationProvider: AnimationPropertyProvider) {
         if (decorations.keys.size == MAX_NUMBER_OF_DECORATION) return
         if (decorations[decoration] == MAX_NUMBER_OF_DECORATION - 1) return
         val anim: AnimationProperties =
-            if (isOnTree(decoration)) { shiftDecoration(decoration) }
-            else { putDecoration(decoration) }
+            if (isOnTree(decoration)) { getShiftDecorationAnim(decoration) }
+            else { getPuttingDecorationAnim(decoration) }
         animationProperty.invoke(anim)
     }
 
     private fun isOnTree(d: Decoration) : Boolean {
         return decorations.containsKey(d)
     }
-    private fun shiftDecoration(d : Decoration) : AnimationProperties {
+    private fun getShiftDecorationAnim(d : Decoration) : AnimationProperties {
         val position = decorations[d]!!.plus(1)
         decorations[d] = position
         return getAnimation(position)
     }
 
-    private fun putDecoration(d : Decoration) : AnimationProperties {
+    private fun getPuttingDecorationAnim(d : Decoration) : AnimationProperties {
         for (i in 0 until MAX_NUMBER_OF_DECORATION) {
             if (!decorations.values.contains(i)) {
                 decorations[d] = i
