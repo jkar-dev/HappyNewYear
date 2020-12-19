@@ -15,8 +15,12 @@ class Tree(private val animationProvider: AnimationPropertyProvider) {
     private fun isOnTree(d: Decoration) : Boolean {
         return decorations.containsKey(d)
     }
+
     private fun getShiftDecorationAnim(d : Decoration) : AnimationProperties {
-        val position = decorations[d]!!.plus(1)
+        var position = decorations[d]!!.plus(1)
+        while (decorations.containsValue(position)) {
+            position++
+        }
         decorations[d] = position
         return getAnimation(position)
     }
